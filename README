@@ -1,8 +1,9 @@
 My first allocator :)
 
 To compile the lib:
-	g++  -c -fpic lib.cpp && g++ -shared -o libmemcheck.so lib.o -pthread
+	cmake .
+	make
 
 
 To run the lib
-	LD_PRELOAD="./libmemcheck.so" yoursoftware
+	LD_PRELOAD="./libmemchecker.so" yoursoftware
